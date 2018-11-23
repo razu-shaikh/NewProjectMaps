@@ -1,0 +1,111 @@
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#072d6e">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="5"/>
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.rajus.newprojectmaps.MapsActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/B_atm" />
+
+
+    <Button
+        android:id="@+id/B_atm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="ATM"
+        android:padding="5dp"
+       android:layout_below="@+id/B_hopistals"
+        android:textStyle="bold"
+        android:textColor="#211e1e"/>
+
+    <Button
+        android:id="@+id/B_hopistals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Hospitals"
+        android:padding="5dp"
+        android:layout_below="@+id/topPanel"
+        android:layout_alignParentStart="true"
+        android:textStyle="bold"
+        android:textColor="#1b1818"/>
+
+    <Button
+        android:id="@+id/B_carparking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="car Parking"
+        android:padding="5dp"
+        android:layout_below="@+id/B_restaurants"
+        android:layout_toEndOf="@+id/B_atm"
+        android:layout_marginLeft="25dp"
+        android:textStyle="bold"
+        android:textColor="#292424"
+       />
+
+    <Button
+        android:id="@+id/B_restaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Resturent"
+        android:padding="5dp"
+        android:layout_below="@+id/topPanel"
+        android:layout_toEndOf="@+id/B_schools"
+        android:layout_marginLeft="30dp"
+        android:textStyle="bold"
+        android:textColor="#201b1b"/>
+
+    <Button
+        android:id="@+id/B_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Direction"
+        android:padding="5dp"
+        android:layout_below="@+id/B_restaurants"
+        android:layout_alignStart="@+id/B_restaurants"
+        android:textStyle="bold"
+        android:textColor="#2b2525"/>
+
+    <Button
+        android:id="@+id/B_schools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="Schools"
+        android:padding="5dp"
+       android:layout_marginLeft="30dp"
+        android:layout_below="@+id/topPanel"
+        android:layout_toEndOf="@+id/B_hopistals"
+        android:textStyle="bold"
+        android:textColor="#282222"
+        />
+
+
+</RelativeLayout>
